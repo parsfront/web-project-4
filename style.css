@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #17181a;
+    font-family: "Montserrat", sans-serif;
+}
+
+#logo {
+    color: white;
+    font-family: "April Fatface";
+    text-decoration: none;
+}
+
+.nav-header {
+    min-height: 10vh;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    width: 80%;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.line1,
+.line2,
+.line3 {
+    width: 3rem;
+    height: 0.2rem;
+    margin: 0.4rem;
+    background: white;
+}
+
+.slide {
+    min-height: 100vh;
+    margin: 0 auto 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background: #17181a;
+}
+
+.hero-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    flex-basis: 25rem;
+    padding-left: 5rem;
+    position: relative;
+    color: white;
+}
+
+.hero-image {
+    position: relative;
+    flex: 1;
+    flex-basis: 25rem;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    border-radius: 3px;
+}
+
+.fashion-span {
+    color: rgb(255, 139, 93);
+}
+
+.mountain-span {
+    color: rgb(86, 124, 228);
+}
+
+.hike-span {
+    color: rgb(167, 110, 231);
+}
+
+.hero-desc h2 {
+    font-family: "April Fatface";
+    font-size: 4rem;
+}
+
+.hero-desc p {
+    padding: 3rem 0rem;
+    font-size: 1.5rem;
+    color: rgb(253, 253, 253);
+}
+
+.explore {
+    padding: 1rem 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    font-size: 1rem;
+    border-radius: 3px;
+    align-self: flex-start;
+    text-decoration: none;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    opacity: 1;
+    clip-path: circle(50px at 100% -10%);
+    -webkit-clip-path: circle(50px at 100% -10%);
+}
+
+.burger {
+    cursor: pointer;
+}
+
+.nav-links {
+    font-size: 3rem;
+    flex-basis: 30rem;
+}
+
+.nav-links h3 {
+    padding: 3rem 0rem;
+    font-weight: 450;
+}
+
+.contact {
+    flex-basis: 30rem;
+}
+
+.contact h2 {
+    font-size: 3rem;
+    padding: 2rem 0rem;
+}
+
+.contact p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.reveal-img,
+.reveal-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #17181a;
+}
+
+.cursor {
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+}
