@@ -125,8 +125,9 @@ function animateSlide() {
     });
 }
 
-let mouse = document.querySelector(".cursor");
-let mouseTxt = mouse.querySelector("span");
+const mouse = document.querySelector(".cursor");
+const mouseTxt = mouse.querySelector("span");
+const burger = document.querySelector(".burger");
 
 function cursor(e) {
     mouse.style.top = e.pageY + "px";
@@ -154,7 +155,70 @@ function activeCursor(e) {
         });
     }
 }
+
+function navToggle(e) {
+    if (!e.target.classList.contains("active")) {
+        e.target.classList.add("active");
+        gsap.to(".line1", 0.5, {
+            rotate: "45deg",
+            y: 5,
+            background: "black",
+        });
+        gsap.to(".line2", 0.5, {
+            rotate: "-45deg",
+            y: -5,
+            background: "black",
+        });
+        gsap.to(".line3", 0.5, {
+            rotate: "45deg",
+            y: -15,
+            background: "black",
+        });
+        gsap.to(".line4", 0.5, {
+            rotate: "-45deg",
+            y: -25,
+            background: "black",
+        });
+        gsap.to(".nav-bar", 1, {
+            clipPath: "circle(2500px at 100% -10%)",
+        });
+        gsap.to("#logo", 1, {
+            color: "#000",
+        });
+        document.body.classList.add("hide");
+    } else {
+        e.target.classList.remove("active");
+        gsap.to(".line1", 0.5, {
+            rotate: "0",
+            y: 0,
+            background: "white",
+        });
+        gsap.to(".line2", 0.5, {
+            rotate: "0",
+            y: 0,
+            background: "white",
+        });
+        gsap.to(".line3", 0.5, {
+            rotate: "0",
+            y: 0,
+            background: "white",
+        });
+        gsap.to(".line4", 0.5, {
+            rotate: "0",
+            y: 0,
+            background: "white",
+        });
+        gsap.to(".nav-bar", 1, {
+            clipPath: "circle(50px at 100% -10%)",
+        });
+        gsap.to("#logo", 1, {
+            color: "#fff",
+        });
+        document.body.classList.remove("hide");
+    }
+}
+//EventListeners
+burger.addEventListener("click", navToggle);
 window.addEventListener("mousemove", cursor);
 window.addEventListener("mouseover", activeCursor);
-
 animateSlide();
