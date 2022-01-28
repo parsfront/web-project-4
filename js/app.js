@@ -1,6 +1,7 @@
 let controller;
 let slideScene;
 let pageScene;
+let detailScene;
 
 function animateSlide() {
     //Init controller
@@ -47,17 +48,7 @@ function animateSlide() {
             {
                 x: "100%",
             },
-            "-=0.5"
-        );
-        slideT1.fromTo(
-            nav,
-            {
-                y: "-100%",
-            },
-            {
-                y: "0%",
-            },
-            "-=0.5"
+            "-=0.75"
         );
         //Creat Scene
         slideScene = new ScrollMagic.Scene({
